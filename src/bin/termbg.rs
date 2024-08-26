@@ -2,10 +2,10 @@ fn main() {
     let timeout = std::time::Duration::from_millis(100);
 
     println!("Check terminal background color");
-    let term = termbg::terminal();
-    let latency = termbg::latency(std::time::Duration::from_millis(1000));
-    let rgb = termbg::rgb(timeout);
-    let theme = termbg::theme(timeout);
+    let term = termbg_with_async_stdin::terminal();
+    let latency = termbg_with_async_stdin::latency(std::time::Duration::from_millis(1000));
+    let rgb = termbg_with_async_stdin::rgb(timeout);
+    let theme = termbg_with_async_stdin::theme(timeout);
 
     println!("  Term : {:?}", term);
 

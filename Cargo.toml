@@ -1,6 +1,6 @@
 [package]
-name = "termbg"
-version = "0.5.1"
+name = "termbg-with-async-stdin"
+version = "0.1.0"
 authors = ["dalance <dalance@gmail.com>"]
 repository = "https://github.com/dalance/termbg"
 keywords = ["console", "terminal", "cli"]
@@ -23,9 +23,11 @@ pre-release-replacements    = [
 ]
 
 [dependencies]
-async-std = "1"
 crossterm = "0.28"
-thiserror = "1"
+thiserror   = "1"
+tokio       = {version = "1.39.3", features = ["io-util", "net", "rt", "rt-multi-thread", "time"]}
+futures     = "0.3.30"
+libc        = "0.2.158"
 
 [target.'cfg(target_os = "windows")'.dependencies]
 winapi = { version = "0.3", features = ["wincon", "winbase", "processenv", "impl-default"] }
