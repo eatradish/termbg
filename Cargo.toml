@@ -1,6 +1,6 @@
 [package]
 name = "termbg-with-async-stdin"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["dalance <dalance@gmail.com>"]
 repository = "https://github.com/dalance/termbg"
 keywords = ["console", "terminal", "cli"]
